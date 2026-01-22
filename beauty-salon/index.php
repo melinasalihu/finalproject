@@ -1,0 +1,39 @@
+<?php get_header(); ?>
+
+<section class="about-section">
+    <div class="container">
+        <h1><?php bloginfo('name'); ?></h1>
+        <p class="lead"><?php bloginfo('description'); ?></p>
+        <div class="about-text">
+            <p>Me një përvojë 10 vjeçare, stafi ynë i kualifikuar përdor teknologjitë më të fundit për t'ju ofruar shërbimin më të mirë të bukurisë dhe ndihjes.</p>
+        </div>
+    </div>
+</section>
+
+<section class="dashboard-section">
+    <div class="container">
+        <h2 class="section-title">Zgjidhni Shërbimin</h2>
+        <div class="dashboard-grid">
+            <?php
+            $categories = array(
+                'thonj'    => array('titulli' => 'Thonj', 'icon' => '💅', 'color' => 'pink'),
+                'floke'    => array('titulli' => 'Flokë', 'icon' => '✂️', 'color' => 'gold'),
+                'makeup'   => array('titulli' => 'Makeup', 'icon' => '💄', 'color' => 'dark'),
+                'skincare' => array('titulli' => 'Skincare', 'icon' => '✨', 'color' => 'soft')
+            );
+
+            foreach ($categories as $slug => $data) {
+                $term = get_term_by('slug', $slug, 'kategoria_sherbimit');
+                $link = ($term) ? get_term_link($term) : '#'; 
+                ?>
+                <a href="<?php echo esc_url($link); ?>" class="dash-item <?php echo esc_attr($data['color']); ?>">
+                    <span class="dash-icon"><?php echo $data['icon']; ?></span>
+                    <h3><?php echo esc_html($data['titulli']); ?></h3>
+                    <p>Kliko për shërbimet</p>
+                </a>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+
+<?php get_footer(); ?>
