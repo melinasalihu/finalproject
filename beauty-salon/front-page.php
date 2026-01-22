@@ -84,4 +84,60 @@ get_header(); ?>
     </div>
 </section>
 
+<!-- Testimonials Section -->
+<section style="padding: 60px 20px; background: white;">
+    <div class="container">
+        <h2 class="section-title">Përvojat e Klientëve Tanë</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px;">
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid var(--gold);">
+                <div style="display: flex; margin-bottom: 15px;">
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                </div>
+                <p style="color: #666; line-height: 1.6; margin: 15px 0; font-style: italic;">
+                    "Shërbim i mahnitshëm! Stafi ishte shumë profesional dhe i vëmendshëm ndaj kërkesave të mia."
+                </p>
+                <p style="font-weight: 600; color: var(--dark); margin: 10px 0 0 0;">Fatima H.</p>
+                <p style="color: #999; margin: 5px 0 0 0; font-size: 0.9rem;">Shërbimi i Flokëve</p>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid var(--gold);">
+                <div style="display: flex; margin-bottom: 15px;">
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                </div>
+                <p style="color: #666; line-height: 1.6; margin: 15px 0; font-style: italic;">
+                    "Makiazhi për dasmën time ishte absolutisht perfekt! Nuk mund ta përshkruaj mirë."
+                </p>
+                <p style="font-weight: 600; color: var(--dark); margin: 10px 0 0 0;">Drina L.</p>
+                <p style="color: #999; margin: 5px 0 0 0; font-size: 0.9rem;">Shërbimi i Makeup</p>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid var(--gold);">
+                <div style="display: flex; margin-bottom: 15px;">
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                    <span style="color: var(--gold); font-size: 1.1rem;">★</span>
+                </div>
+                <p style="color: #666; line-height: 1.6; margin: 15px 0; font-style: italic;">
+                    "Trajtimi i lëkurës ishte shumë relaksues. Lëkura ime duket më e shëndetshme se kurrë!"
+                </p>
+                <p style="font-weight: 600; color: var(--dark); margin: 10px 0 0 0;">Lindita M.</p>
+                <p style="color: #999; margin: 5px 0 0 0; font-size: 0.9rem;">Shërbimi i Skincare</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="<?php echo home_url('/testimonials'); ?>" class="btn-gold" style="padding: 10px 25px; display: inline-block;">Shiko Më Shumë Përmendore</a>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
