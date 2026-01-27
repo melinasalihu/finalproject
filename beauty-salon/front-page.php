@@ -31,15 +31,14 @@ get_header(); ?>
         <div class="dashboard-grid">
             <?php
             $categories = array(
-                'thonj'    => array('titulli' => 'Thonj', 'icon' => '💅', 'color' => 'pink'),
-                'floke'    => array('titulli' => 'Flokë', 'icon' => '✂️', 'color' => 'gold'),
-                'makeup'   => array('titulli' => 'Makeup', 'icon' => '💄', 'color' => 'dark'),
-                'skincare' => array('titulli' => 'Skincare', 'icon' => '✨', 'color' => 'soft')
+                'thonj'    => array('titulli' => 'Thonj', 'icon' => '💅', 'color' => 'pink', 'url' => '/lloj-sherbimi/nails/'),
+                'floke'    => array('titulli' => 'Flokë', 'icon' => '✂️', 'color' => 'gold', 'url' => '/lloj-sherbimi/floke/'),
+                'makeup'   => array('titulli' => 'Makeup', 'icon' => '💄', 'color' => 'dark', 'url' => '/lloj-sherbimi/makeup/'),
+                'skincare' => array('titulli' => 'Skincare', 'icon' => '✨', 'color' => 'soft', 'url' => '/lloj-sherbimi/skincare/')
             );
 
             foreach ($categories as $slug => $data) {
-                $term = get_term_by('slug', $slug, 'kategoria_sherbimit');
-                $link = ($term) ? get_term_link($term) : '#'; 
+                $link = home_url($data['url']); 
                 ?>
                 <a href="<?php echo esc_url($link); ?>" class="dash-item <?php echo esc_attr($data['color']); ?>">
                     <span class="dash-icon"><?php echo $data['icon']; ?></span>
